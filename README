@@ -1,0 +1,11 @@
+Για το δεύτερο project πρόσθεσα στο application currency_Converter δύο νέες λειτουργίες.
+
+1)ένα κουμπί που σε παραπέμπει σε αυτή τη σελίδα(όπου υπάρχει το report της εργασίας μου ) χρησιμοποιώντας ένα servlet που κάνει redirect και ένα Listener που κάνει setAtribute το url που παίρνει από context parameters που δηλώνονται στο (web.xml).
+
+2)Ένα κουμπί που κάνει download το κώδικα της εργασίας σε .rar αρχείο ,πάλι με ένα servlet που θέτει το rar αρχείο στο response σαν inputsream.
+
+Δεν χρησιμοποίησα κάποια άλλη αναφορά εκτός από τις σημειώσεις του μαθήματος και ένα blog :http://www.coderanch.com/t/354202/Servlets/java/File-download-servlets από το οποίο χρησιμοποίησα την εντολή response.setHeader(“Content-Disposition”,”attachment;filename=currency_converter2.rar”); γιατί χωρίς αυτή το όνομα του αρχείου που μου έκανε download δεν ήταν το σωστό.
+
+Αναφέρω ότι η εφαρμογή έπαιρνε τα δεδομένα δυναμικά μέσω της σελίδας της Ευρωπαϊκής κεντρικής τράπεζας σε xml μορφή ανανεωμένα κάθε φορά από το πρώτο project οπότε αυτή η λειτουργία ήταν ήδη έτοιμη.
+
+URL:http://deli.servehttp.com/currency_converter2/
