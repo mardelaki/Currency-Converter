@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>currency_converter2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Converter</servlet-name>
+    <servlet-class>my.pack.Converter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Converter</servlet-name>
+    <url-pattern>/Converter.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Redirector</servlet-name>
+    <servlet-class>my.pack.Redirector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Redirector</servlet-name>
+    <url-pattern>/Redirector.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetCode</servlet-name>
+    <servlet-class>my.pack.GetCode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetCode</servlet-name>
+    <url-pattern>/GetCode.do</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  <param-name>infoUrl</param-name>
+  <param-value>http://mardelaki.wordpress.com/</param-value>
+  </context-param>
+  <listener>
+  <listener-class>my.pack.MyListener</listener-class>
+  </listener>
+</web-app>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Currency Converter</title>
+<script type='text/javascript'>
+
+function checknumber(){
+	var x=document.checknum.amount.value
+	var anum=/(^\d+$)|(^\d+\.\d+$)/
+	if (anum.test(x) && x.length != 0)
+	testresult=true
+	else{
+	if(x.length == 0)
+	alert("Amount field cannot be empty!")
+	else{
+	alert("Please input a valid number!")}
+	testresult=false
+	}
+	return (testresult)
+	}
+
+function swap(){
+	var from=document.checknum.from_currency.value;
+	var to=document.checknum.to_currency.value;
+	var temp=document.checknum.from_currency.value;
+	document.checknum.from_currency.value=to;
+	document.checknum.to_currency.value=temp;
+}
+</script>
+</head>
+<body>
+	<form method="post" name="checknum" action="Converter.do"
+		onSubmit="return checknumber()">
+		Amount to convert :<input type="text" name="amount" id="amount"
+			value="1" maxlength="100"/><br />
+							
+			<br> Please select your currencies: <br> 
+From : <select name="from_currency" size="1">
+			<option value='EUR' selected="selected">EUR - Euro</option>
+			<option value='USD'>USD - US Dollar</option>
+			<option value='AUD'>AUD - Australian Dollar</option>
+			<option value='CAD'>CAD - Canadian Dollar</option>
+			<option value='CHF'>CHF - Swiss Franc</option>
+			<option value='CNY'>CNY - Chinese Yuan Renminbi</option>
+			<option value='DKK'>DKK - Danish Krone</option>
+			<option value='GBP'>GBP - British Pound</option>
+			<option value='HKD'>HKD - Hong Kong Dollar</option>
+			<option value='HUF'>HUF - Hungarian Forint</option>
+			<option value='INR'>INR - Indian Rupee</option>
+			<option value='JPY'>JPY - Japanese Yen</option>
+			<option value='MXN'>MXN - Mexican Peso</option>
+			<option value='MYR'>MYR - Malaysian Ringgit</option>
+			<option value='NOK'>NOK - Norwegian Krone</option>
+			<option value='NZD'>NZD - New Zealand Dollar</option>
+			<option value='PHP'>PHP - Philippine Peso</option>
+			<option value='RUB'>RUB - Russian Ruble</option>
+			<option value='SEK'>SEK - Swedish Krona</option>
+			<option value='SGD'>SGD - Singapore Dollar</option>
+			<option value='THB'>THB - Thai Baht</option>
+			<option value='TRY'>TRY - Turkish Lira</option>
+			<option value='ZAR'>ZAR - South African Rand</option>
+		</select> 
+		<br> <br>
+		<button type="button" onclick="swap()">Swap</button>
+		<br> <br>
+   To : <select name="to_currency" size="1">
+   			<option value='USD' selected="selected">USD - US Dollar</option>
+   			<option value='EUR'>EUR - Euro</option>
+			<option value='AUD'>AUD - Australian Dollar</option>
+			<option value='CAD'>CAD - Canadian Dollar</option>
+			<option value='CHF'>CHF - Swiss Franc</option>
+			<option value='CNY'>CNY - Chinese Yuan Renminbi</option>
+			<option value='DKK'>DKK - Danish Krone</option>
+			<option value='GBP'>GBP - British Pound</option>
+			<option value='HKD'>HKD - Hong Kong Dollar</option>
+			<option value='HUF'>HUF - Hungarian Forint</option>
+			<option value='INR'>INR - Indian Rupee</option>
+			<option value='JPY'>JPY - Japanese Yen</option>
+			<option value='MXN'>MXN - Mexican Peso</option>
+			<option value='MYR'>MYR - Malaysian Ringgit</option>
+			<option value='NOK'>NOK - Norwegian Krone</option>
+			<option value='NZD'>NZD - New Zealand Dollar</option>
+			<option value='PHP'>PHP - Philippine Peso</option>
+			<option value='RUB'>RUB - Russian Ruble</option>
+			<option value='SEK'>SEK - Swedish Krona</option>
+			<option value='SGD'>SGD - Singapore Dollar</option>
+			<option value='THB'>THB - Thai Baht</option>
+			<option value='TRY'>TRY - Turkish Lira</option>
+			<option value='ZAR'>ZAR - South African Rand</option>
+		</select> <br> <br> <input type="SUBMIT">
+	</form>
+<form  method="get" action="Redirector.do"> <!-- action="http://www.google.com" -->
+    <input type="Submit" value="Info">
+</form>		
+<form  method="get" action="GetCode.do"> 
+    <input type="Submit" value="Code">
+</form>	
+
+</body>
+</html>
